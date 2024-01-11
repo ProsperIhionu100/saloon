@@ -1,0 +1,405 @@
+{% extends "main.html" %}  
+{% load static %}
+
+{% block content %}
+                                
+
+        <!-- slideshow area start -->
+        <div class="owl-carousel hero-slider">
+            <div class="slider-item" style="background-image: url({% static 'images/slideshow/slide-1.jpg' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="subtitle">WE KNOW WHAT HAIR CUT SUITS YOU</p>
+                            <h1 class="title">MAKING YOUR LOOK</h1>
+                            <h1 class="title title-colored">AWESOME &amp; MANLY</h1>
+                            <a class="slider-btn" href="service.html">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item" style="background-image: url({% static 'images/slideshow/slide-2.jpg' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="subtitle">CLASSIC REFUGE HAIRCUTS AND SHAVES</p>
+                            <h1 class="title">OUR HAIR STYLES</h1>
+                            <h1 class="title title-colored">ENHANCES YOUR SMILE</h1>
+                            <a class="slider-btn bg-white" href="service.html">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-item" style="background-image: url({% static 'images/slideshow/slide-3.jpg' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p class="subtitle">REMEMBER… IT’S NOT JUST A HAIRCUT, IT’S AN EXPERIENCE</p>
+                            <h1 class="title">WHERE MEN AND BOYS</h1>
+                            <h1 class="title title-colored">WANT TO LOOK THEIR VERY BEST</h1>
+                            <a class="slider-btn" href="service.html">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slideshow area end -->
+        
+        <!-- service area start -->
+        <div class="service-area bg-color-1 pad120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-title text-center">
+                            <img src="{% static 'images/title-img/title-img-2.png' %}" class="title-img mb15" alt="">
+                            <h3 class="title">Popular <strong>Services</strong></h3>
+                            <p class="sub-title">A wide range of male grooming services under one roof</p>
+                        </div>
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box center-style text-center">
+                            <div class="service-icon">
+                                <i class="flaticon-scissors-and-comb"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Hair Styling</h4>
+                                <p>Get the best from your thick hair by choosing a great style and using the right products for the style you’re after.</p>
+                                <!-- <a href="#" class="btn btn-primary btn-service">Book Now</a> -->
+                            </div>
+                        </div> <!--/.service-box-->
+                    </div> <!-- /.col -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box center-style text-center">
+                            <div class="service-icon">
+                                <i class="flaticon-razor-hair-salon-tool"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Beard trim</h4>
+                                <p>Every men wants to grow out beard and see just out of curiosity how he looks. If this is you, then welcome to the club.</p>
+                                <!-- <a href="#" class="btn btn-primary btn-service">Book Now</a> -->
+                            </div>
+                        </div> <!--/.service-box-->
+                    </div> <!-- /.col -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box center-style text-center">
+                            <div class="service-icon">
+                                <i class="flaticon-hair-dryer-on"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Hair color</h4>
+                                <p>Color is an underutilized way of adding a unique style and aesthetic appeal to your hair. We are here for you.</p>
+                                <!-- <a href="#" class="btn btn-primary btn-service">Book Now</a> -->
+                            </div>
+                        </div> <!--/.service-box-->
+                    </div> <!-- /.col -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-box center-style text-center">
+                            <div class="service-icon">
+                                <i class="flaticon-brush-tool"></i>
+                            </div>
+                            <div class="service-content">
+                                <h4>Cleansing fecial</h4>
+                                <p>If you’re washing your face with bar soap and water and running out the door, then it’s time to step up your skincare game.</p>
+                                <!-- <a href="#" class="btn btn-primary btn-service">Book Now</a> -->
+                            </div>
+                        </div> <!--/.service-box-->
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+        </div>
+        <!-- service area end -->
+
+        <!-- team area start -->
+        <div class="team-area bg-color-2 pad120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-title text-center">
+                            <img src="{% static 'images/title-img/title-img-4.png' %}" class="title-img mb15" alt="">
+                            <h3 class="title">Expert <strong>stylists</strong></h3>
+                            <p class="sub-title">Our stylist offers traditional and contemporary services along with our very own treatment</p>
+                        </div>
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+            <div class="container">
+                <div class="row">
+                    {% for employee in employees %}
+                    <div class="col-md-4 col-sm-4">
+                        <div class="team-box text-center xs-mb30">
+                            <div class="team-img">
+                                <img src="{{employee.profile_image.url}}" alt="" class="img-responsive">
+                                <div class="overley">
+                                    <div class="team-social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-content">
+                                <h4>{{employee.name}}</h4>
+                                <p>{{employee.skill}}</p>
+                            </div>
+                        </div> <!--/.team-box-->
+                    </div> <!-- /.col -->
+                    {% endfor %}
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+        </div>
+        <!-- team area end -->
+
+        <!-- booking area start -->
+        <div class="booking-area bg-color-1 pad-t120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-title text-center">
+                            <img src="{% static 'images/title-img/title-img-3.png' %}" class="title-img mb15" alt="">
+                            <h3 class="title">We are <strong>available</strong></h3>
+                            <p class="sub-title">Dedicated To Providing Excellence In Our Service</p>
+                        </div>
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-6">
+                    	<div class="store-timing mt60">
+                    		<h4>Opening time</h4>
+                    		<p>Monday to Wednesday <span class="pull-right">07.00 am - 10:00 pm</span></p>
+                    		<p>Friday and Saturday <span class="pull-right">12.00 pm - 10:30 pm</span></p>
+                    	</div>
+                    	<div class="store-timing mt60">
+                    		<h4>Closing time</h4>
+                    		<p>Friday and Saturday <span class="pull-right">12.00 pm - 10:30 pm</span></p>
+                    		<p>Sunday <span class="pull-right">Weekend</span></p>
+                    	</div>
+                    </div> <!-- /.col -->
+                    <div class="col-md-2 hidden-sm hidden-xs">
+                    	<img src="{% static 'images/others/scissor.png' %}" alt="" class="img-responsive">
+                    </div> <!-- /.col -->
+                    <div class="col-md-5 col-sm-6 sm-pad-b">
+                        <!-- booking form start -->
+                        <form id="booking-form" class="booking-form mt65" data-toggle="validator" action="" method="POST">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="book-date" placeholder="Date" required data-error="Choose a date">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> <!-- /.col -->
+                                <div class="col-md-6">
+                                    <select class="form-control" id="book-time" required data-error="Select a time">
+                                        <option value="">Time</option>
+                                        <option value="07:00 am">07:00 am</option>
+                                        <option value="08:00 am">08:00 am</option>
+                                        <option value="09:00 am">09:00 am</option>
+                                        <option value="10:00 am">10:00 am</option>
+                                        <option value="11:00 am">11:00 am</option>
+                                        <option value="12:00 pm">12:00 pm</option>
+                                        <option value="01:00 pm">01:00 pm</option>
+                                        <option value="02:00 pm">02:00 pm</option>
+                                        <option value="03:00 pm">03:00 pm</option>
+                                        <option value="04:00 pm">04:00 pm</option>
+                                        <option value="05:00 pm">05:00 pm</option>
+                                        <option value="06:00 pm">06:00 pm</option>
+                                        <option value="07:00 pm">07:00 pm</option>
+                                        <option value="08:00 pm">08:00 pm</option>
+                                        <option value="09:00 pm">09:00 pm</option>
+                                        <option value="10:00 pm">10:00 pm</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div> <!-- /.col -->
+                            </div> <!-- /.row -->
+                            <div class="row mb15">
+                                <div class="col-md-6">
+                                    <select class="form-control" id="book-service" required data-error="Choose a service">
+                                        <option value="">Service</option>
+                                        <option value="Hair Styling and Treatments">Hair Styling &amp; Treatments</option>
+                                        <option value="Shaves and Hot Towels">Shaves &amp; Hot Towels</option>
+                                        <option value="Beard Styling and Treatments">Beard Styling &amp; Treatments</option>
+                                        <option value="Signature Package">Signature Package</option>
+                                        <option value="Barbershop Facials">Barbershop Facials</option>
+                                        <option value="Treatment Lounge">Treatment Lounge</option>
+                                        <option value="Wax Couch">Wax Couch</option>
+                                        <option value="Wedding Package">Wedding Package</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div> <!-- /.col -->
+                                <div class="col-md-6">
+                                    <select class="form-control" id="book-stylist" required data-error="Choose a stylist">
+                                        <option value="">Stylist</option>
+                                        <option value="Paul Steels">Paul Steels</option>
+                                        <option value="Sean Dick">Sean Dick</option>
+                                        <option value="Paul Dos Reis">Paul Dos Reis</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div> <!-- /.col -->
+                            </div> <!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="book-name" placeholder="Name" required data-error="Enter your name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> <!-- /.col -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="book-phone" placeholder="Phone" required data-error="Enter your phone number">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> <!-- /.col -->
+                            </div> <!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="book-email" placeholder="Email" required data-error="Enter your email address">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> <!-- /.col -->
+                            </div> <!-- /.row -->
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary hvr-in" id="book-submit">Book now</button>
+                                    </div>
+                                </div> <!-- /.col -->
+                            </div> <!-- /.row -->
+                        </form>
+                        <div id="msgalert" class="hidden"></div>
+                    	<!-- booking form end -->
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+        </div>
+        <!-- booking area end -->
+
+        <!-- testimonial area start -->
+        <div class="testimonial-area bg-color-2 pad120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-title text-center">
+                            <img src="{% static 'images/title-img/title-img-1.png' %}" class="title-img mb15" alt="">
+                            <h3 class="title">Happy <strong>clients</strong></h3>
+                            <p class="sub-title">The staff interact with the client and make sure that the Client gets 100% satisfaction</p>
+                        </div>
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="feedback-box text-center">
+                        	<div class="feedback-carousel">
+                                    <div class="slide-item">
+                                        <p>
+                                            I was a bit skeptical at start to try out a new salon for my haircut, It was a good looking salon so I finally decided to give it a try. I had an amazing experience from the hospitality I received to the haircut I had. Technically sound and Well behaved staff. Their rates are reasonable too. Must try their cocktail blowdrys.
+                                        </p>
+                                        <h4>Abraham</h4>
+                                    </div>
+                                    <div class="slide-item">
+                                        <p>
+                                            I had appointment for 6.30. As a working lady I was late to reach the place I got in by 7.50 the gal who called me for confirmation was so polite while talking even when I was late. That was sweet. The stuff did it perfect.
+                                        </p>
+                                        <h4>David</h4>
+                                    </div>
+                                    <div class="slide-item">
+                                        <p>
+                                            Services are very good. Their rates are also very reasonable compare to other professional salons. I was also impressed with the hospitality and the attention I got from the staff.
+                                        </p>
+                                        <h4>Lincoln</h4>
+                                    </div>
+                        	</div>
+                        </div>
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+        </div>
+        <!-- testimonial area end -->
+
+        <!-- facility area start -->
+        <div class="facility-area bg-color-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 hidden-sm hidden-xs">
+                        <img src="{{img2.img1.url}}" alt="" class="img-responsive">
+                    </div> <!-- /.col -->
+                    <div class="col-md-7 pad-t90">
+                        <div class="section-title">
+                            <h3 class="title">{{img2.title}}</h3>
+                            <p class="sub-title ttu"><strong>{{img2.sub_title}}</strong></p>
+                            <p>{{img2.brief|linebreaksbr}}</p>
+                        </div>
+                        <div class="row sm-pad-b">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="counter-box" data-count="20">
+                                    <div class="counter-icon">
+                                        <i class="flaticon-scissors"></i>
+                                    </div>
+                                    <div class="counter-content">
+                                        <h2 class="counter"></h2>
+                                        <h4>Professional Barbers</h4>
+                                    </div>
+                                </div> <!--/.counter-box-->
+                            </div> <!-- /.col -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="counter-box" data-count="786">
+                                    <div class="counter-icon">
+                                        <i class="flaticon-boy-hair-shape"></i>
+                                    </div>
+                                    <div class="counter-content">
+                                        <h2 class="counter"></h2>
+                                        <h4>Stunning Hair Styles</h4>
+                                    </div>
+                                </div> <!--/.counter-box-->
+                            </div> <!-- /.col -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="counter-box" data-count="3249">
+                                    <div class="counter-icon">
+                                        <i class="flaticon-boy-happy-smile"></i>
+                                    </div>
+                                    <div class="counter-content">
+                                        <h2 class="counter"></h2>
+                                        <h4>Satisfied Clients</h4>
+                                    </div>
+                                </div> <!--/.counter-box-->
+                            </div> <!-- /.col -->
+                        </div> <!-- /.row -->
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+        </div>
+        <!-- facility area end -->
+
+        <!-- call to action start -->
+        <div class="call-to-action pad80 bg-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="c2a bg-drk-trns white-text">
+                            <div class="row">
+                                <div class="col-md-8 pad80">
+                                    <h3>Get 25% off your first mens haircut.</h3>
+                                    <p>You can ask for a first visit voucher.The voucher is valid at any of our salons. The 25% discount only applies to a mens haircut with a senior stylist.</p>
+                                    <a href="#" class="btn btn-primary hvr-in">Visit now</a>
+                                </div> <!-- /.col -->
+                                <div class="col-md-4 hidden-sm hidden-xs">
+                                    <div class="c2a-img">
+                                        <img class="img-1" src="{% static 'images/others/c2a-1.jpg' %}" alt="">
+                                        <img class="img-2" src="{% static 'images/others/c2a-2.jpg' %}" alt="">
+                                    </div>
+                                </div> <!-- /.col -->
+                            </div> <!-- /.row -->
+                        </div>
+                    </div> <!-- /.col -->
+                </div> <!-- /.row -->
+            </div> <!--/.container-->
+        </div>
+        <!-- call to action end -->
+{% endblock content %}  

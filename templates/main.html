@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+    
+<!-- Mirrored from demo.themefisher.com/menzsaloon/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 13:45:16 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>MenzSaloon</title>
+        <meta name="author" content="iThemesLab">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- favicons -->
+        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+        <link rel="apple-touch-icon" href="{% static 'favicon/apple-icon-57x57.png' %}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static 'favicon/apple-icon-72x72.png' %}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static 'favicon/apple-icon-114x114.png' %}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{% static 'favicon/apple-icon-144x144.png' %}">
+    
+        <!-- load google font -->
+        
+        <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7cPlayfair+Display:400,700' %}" rel="stylesheet">
+        
+        <!-- all stylesheets include start -->
+        <!-- bootstrap v3.3.7 css -->
+        <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+        <!-- fontawesome css -->
+        <link rel="stylesheet" href="{% static 'css/vendor/font-awesome.min.css' %}">
+        <!-- flaticon css -->
+        <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+        <!-- OwlCarousel css -->
+        <link rel="stylesheet" href="{% static 'css/vendor/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'css/vendor/owl.theme.css' %}">
+        <!-- bootstrap date picker -->
+        <link rel="stylesheet" href="{% static 'css/vendor/bootstrap-datepicker.standalone.css' %}">
+        <!-- theme style css -->
+        <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
+        <!-- responsive css -->
+        <link rel="stylesheet" href="{% static 'css/responsive.min.css' %}">
+        <!-- all stylesheets include end -->
+    </head>
+    <body>
+        
+        {% include 'navbar.html' %}
+        
+        {% block content %}
+        
+        {% endblock content %}
+
+        <!-- footer start -->
+        <div class="footer bg-color-2 pad80 text-center">
+            <div class="container">
+                <div class="row mb30">
+                    <div class="col-md-12">
+                        <div class="footer-logo">
+                            <img src="{% static 'images/others/footer-logo.png' %}" alt="" class="img-center img-responsive">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb30">
+                    <div class="col-md-5 col-sm-5">
+                        <div class="footer-contact text-right">
+                            <p>Phone: +880-123-456-7890</p>
+                            <p>E-mail: info@yourdomain.com</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <div class="footer-icon">
+                            <div class="rotate-45deg"><i class="flaticon-scissors-opened-tool"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-5">
+                        <div class="footer-contact text-left">
+                            <p>#128 Road, Azampur</p>
+                            <p>Dhaka-1230. Bangladesh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-social">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer end -->
+
+        <!-- back to to btn start -->
+        <div id="back-to-top"><i class="fa fa-angle-up"></i></div>
+        <!-- back to to btn end -->
+
+        <!-- all js include start -->
+        <!-- jquery latest version -->
+        <script src="{% static 'js/vendor/jquery-3.1.1.min.js' %}"></script>
+        <!-- bootstrap latest version -->
+        <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+		<!--Appear js file-->
+        <script src="{% static 'js/vendor/jquery.appear.js' %}"></script>
+        <!--CountTo js file-->
+        <script src="{% static 'js/vendor/jquery.countTo.js' %}"></script>
+		<!--Owl Carousel js file-->
+        <script src="{% static 'js/vendor/owl.carousel.min.js' %}"></script>
+        <!--bootstrap date picker js file-->
+
+        <!-- jquery form validator, date picker & booking js -->
+        <script src="{% static 'js/vendor/bootstrap-datepicker.min.js' %}"></script>
+        <script src="{% static 'js/vendor/validator.min.js' %}"></script>
+        <script src="{% static 'js/booking.js' %}"></script>
+
+        <!-- template main js file -->
+        <script src="{% static 'js/main.js' %}"></script>
+        <!-- all js include end -->
+    </body>
+
+<!-- Mirrored from demo.themefisher.com/menzsaloon/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Sep 2023 13:45:40 GMT -->
+</html>
